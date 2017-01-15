@@ -1,0 +1,2 @@
+# KanjiRemainder
+KanjiRemainder, Support KanjiLearning
