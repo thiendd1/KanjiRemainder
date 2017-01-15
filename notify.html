@@ -1,0 +1,51 @@
+<html>
+<head>
+<script src="jquery-3.1.1.min.js"></script>
+<script src="jquery.csv.js"></script>
+<script src="dexie.js"></script>
+<script src="connect.js"></script>
+<script src="papaparse.min.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript">
+
+	$( document ).ready(function() {
+		//putData(null);
+		//removeDataByKey(1);
+		//removeAll();
+		//getItem(85);
+		//randomItem();
+		//loadData('kanji.csv');
+		//var objects = $.csv.toObjects(dataString);
+		
+		Papa.parse("kanji.csv", {
+			download: true,
+			complete: function(results) {
+				console.log(results);
+			}
+		});
+	});
+	
+	</script>
+	<fieldset>
+	<legend>Import data:</legend>
+	<input id='inputFile' type='file' onchange="handleFiles(this.files)" />
+	<button id='btnImport' onclick="importData()">Import</button>
+	</fieldset>
+	<br/>
+	<fieldset>
+	<legend>Settings:</legend>
+	<label>Level:</label>
+	<select id='slLevel'>
+		<option value='5'>N5</option>
+		<option value='4'>N4</option>
+		<option value='3'>N3</option>
+		<option value='2'>N2</option>
+		<option value='1'>N1</option>
+	</select>
+	</fieldset>
+	<br />
+	<button id='btnSave'>Save</button>
+</body>
+</html>
