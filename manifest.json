@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Kanji Remainder",
+  "version": "1.0",
+  "description": "Plugin for Chrome support Kanji learning. Report-bug: thiendd1@fsoft.com.vn. Check-out src: Github",
+  "author": "Dao Duc Thien, Su Po Man",
+  "icons": {
+    "128": "icon128-2x.png"
+  },
+  "permissions": ["storage", "alarms", "notifications", "https://dummyimage.com/*"],
+  "app": {
+    "background": {
+      "scripts": ["config.js", "background.js", "dexie.js", "jquery-3.1.1.min.js", "jquery.csv.js", "connect.js", "papaparse.min.js"]
+    }
+  },
+  "minimum_chrome_version": "28"
+}

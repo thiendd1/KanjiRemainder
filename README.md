@@ -1,2 +1,2 @@
 # KanjiRemainder
-KanjiRemainder, Support KanjiLearning
+Extension of Chrome.
