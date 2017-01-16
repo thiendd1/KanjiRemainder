@@ -22,14 +22,13 @@ function showNotification() {
 	}
 	
 	db.kanjis.toCollection().count(function (count){
-		console.log("Total kanji: " + count);
 		if(count == 0)
 		{
 			chrome.notifications.create('reminder', {
 					type: 'basic',
 					iconUrl: 'icon128-2x.png',
-					title: 'DB is empty !',
-					message: 'DB is empty now. Import data Starting ... !'
+					title: 'Import data',
+					message: 'Import data service starting ... !'
 			 }, function(){
 				 parseDataFromCSV(csvF);
 			 });
@@ -46,7 +45,7 @@ function showNotification() {
 							contextMessage: item.description.trim() + ", " + item.description1
 					});*/
 					var xhr = new XMLHttpRequest();
-					xhr.open("GET", 'https://dummyimage.com/100x100/fff/000.png&text='+item.kanji);
+					xhr.open("GET", textToImgURL + item.kanji);
 					xhr.responseType = "blob";
 					xhr.onload = function(){
 						var blob = this.response;
