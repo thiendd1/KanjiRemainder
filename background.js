@@ -10,6 +10,10 @@ chrome.alarms.create(strMin, {
   periodInMinutes: min
 });
 
+chrome.app.runtime.onLaunched.addListener(function() {
+  parseDataFromCSV(csvF);
+});
+
 chrome.alarms.onAlarm.addListener(function(alarm) {
   if (alarm.name === strMin) {
     showNotification();
