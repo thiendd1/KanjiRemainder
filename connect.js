@@ -26,12 +26,11 @@ function openConnection()
 function parseDataFromCSV(csvF)
 {
 	if(db==null){
-			openConnection();
+		openConnection();
 	}
 	
 	db.kanjis.count(function(count){
 		if(count == 0){
-			console.log("Empty DB. Auto starting import data ...");
 			Papa.parse(csvF, {
 				download: true,
 				complete: function(results) {
@@ -70,8 +69,8 @@ function putData(array){
 		
 		// Put Data
 		db.kanjis.bulkAdd(items).then(function () {
-				console.log("Import data success !");
-		}).catch(function(error) {
+				console.log("Import data success !")
+		}).then(showNotification()).catch(function(error) {
 		   console.log("Ooops: " + error);
 		});
 	}

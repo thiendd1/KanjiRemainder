@@ -10,7 +10,7 @@
   "permissions": ["storage", "alarms", "notifications", "https://dummyimage.com/*"],
   "app": {
     "background": {
-      "scripts": ["config.js", "background.js", "dexie.js", "jquery-3.1.1.min.js", "jquery.csv.js", "connect.js", "papaparse.min.js"]
+      "scripts": ["config.js", "background.min.js", "dexie.js", "jquery-3.1.1.min.js", "jquery.csv.js", "connect.min.js", "papaparse.min.js"]
     }
   },
   "minimum_chrome_version": "28"
