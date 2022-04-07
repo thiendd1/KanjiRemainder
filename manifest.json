@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "Kanji Remainder",
   "version": "1.0",
-  "description": "Plugin for Chrome support Kanji learning. Report-bug: thiendd1@fsoft.com.vn. Check-out src: Github",
+  "description": "Plugin for Chrome support Kanji learning. Check-out src: Github",
   "author": "Dao Duc Thien, Su Po Man",
   "icons": {
     "128": "icon128-2x.png"
